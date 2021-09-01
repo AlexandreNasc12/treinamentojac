@@ -4,6 +4,7 @@ metadata:
   name: {{ include "alexandre.fullname" . }}
   labels:
     {{- include "alexandre.labels" . | nindent 4 }}
+    namespace: alexandre-theia
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
