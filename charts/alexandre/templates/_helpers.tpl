@@ -48,6 +48,7 @@ Selector labels
 {{- define "alexandre.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "alexandre.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+io.cattle.field/appId: alexandre
 {{- end }}
 
 {{/*
