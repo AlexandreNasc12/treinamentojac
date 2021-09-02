@@ -72,11 +72,14 @@ livenessProbe:
     httpGet:
       path: /
       port: http
-      
+
 readinessProbe:
     httpGet:
       path: /
       port: http
+
+ConfigMap:
+    valor: "conteudo do arquivo"
 
 autoscaling:
   enabled: false
