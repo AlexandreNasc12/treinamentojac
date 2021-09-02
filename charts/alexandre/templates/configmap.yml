@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "alexandre.fullname" . }}
+  labels:
+    {{- include "alexandre.labels" . | nindent 4 }}
+data:
+  arquivo-configuracao : {{ .Values.ConfigMap.valor . | nindent 4}}
